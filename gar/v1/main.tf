@@ -1,6 +1,6 @@
 resource "google_artifact_registry_repository" "gar" {
-  location      = "us-central1"
-  repository_id = "python-app"
-  description   = "python-app"
+  location      = var.location
+  repository_id = var.repo_name #"python-app"
+  description   = var.repo_description #"python-app"
   format        = "DOCKER"
 }
